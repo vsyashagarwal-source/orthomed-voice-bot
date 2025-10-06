@@ -1,5 +1,5 @@
 from flask import Flask, request
-from twilio.twiml import VoiceResponse
+from twilio.twiml.voice_response import VoiceResponse
 import json
 import re
 
@@ -85,9 +85,9 @@ bot = OrthoMedicalBot()
 @app.route("/", methods=['GET'])
 def home():
     return """
-    <h1>OrthoMed Voice Bot</h1>
-    <p>Orthopedic Medical Assistant - AI-powered voice bot for orthopedic consultations</p>
-    <p>Call the Twilio number to interact with the bot</p>
+    OrthoMed Voice Bot
+    Orthopedic Medical Assistant - AI-powered voice bot for orthopedic consultations
+    Call the Twilio number to interact with the bot
     """
 
 @app.route("/voice", methods=['GET', 'POST'])
